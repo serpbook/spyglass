@@ -54,4 +54,11 @@ $(document).ready(function () {
     cnt++;
 
   });
+  //styling CSS through JS
+  $("span.num").css("margin-top", "3px");
+  $("span.num").css("position", "relative");
+  $("span.num").css("float", "left");
+  $("span.num").css("font-size", "20px");
+  $("span.num").css("padding", "10px 15px 0px");
+
 });
