@@ -48,4 +48,36 @@ $(document).ready(function(){
 	}, 1000, function(){});
 
 });
-alert(0)
+
+
+  //counter
+  $(document).ready(function(){
+    var cnt = 1;
+      if(ignore_local == 0){
+        if(in_local_pack){
+          $("div.dbg0pd").each(function() {
+            $(this).html("<span class='num'>#"+cnt+"</span>"+$(this).html());
+              cnt++;
+          });
+        }
+      }else{
+        $("div.dbg0pd").each(function() {
+          $(this).html("<span class='num ignored'>Ignored</span>"+$(this).html());
+        });
+      }
+    $("#rso div.rc").each(function() {
+      if($(this).parent('div.gy6Qzb').length == 0 && $(this).closest("div.pocFOe").length == 0){
+        if($(this).closest('div.kp-blk').length > 0){
+          $(this).closest('div.kp-blk').parent().parent().html("<span class='num'>#"+cnt+"</span>"+$(this).closest('div.kp-blk').parent().parent().html());
+          cnt++;
+        }
+      }
+    });
+    $("#rso div.rc").each(function() {
+      if($(this).closest('div.ifM9O').length == 0 && $(this).parent('div.gy6Qzb').length == 0 && $(this).closest("div.pocFOe").length == 0){
+        $(this).html("<span class='num'>#"+cnt+"</span>"+$(this).html());
+          cnt++;
+      }
+    });
+
+  });
