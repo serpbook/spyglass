@@ -1,3 +1,8 @@
+//setting mobile background
+$("html").css("width", "520px");
+$("html").css("margin", "0 auto");
+$("html").css("background", "#adadad");
+
 var img = '';
 if(!window.location.href.includes('&client')){
   img = '<img src=\"https://keyword.com/serp/images/keyword-logo.svg\" width=\"40\"><br><br>';
