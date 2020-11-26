@@ -20,12 +20,12 @@ if(!window.location.href.includes('&client')){
 }
 
 var unranked = '';
-if(!window.location.href.includes('&unranked')){
+if(window.location.href.includes('&unranked')){
 	unranked = '<br><br><font color=crimson>We did not find your site ranking for the keyword. This is the first page of the results.</font>';
 }
 
 var near = '';
-if(!window.location.href.includes('&near')){
+if(window.location.href.includes('&near')){
 	near = '<br><br><br><span style=\"padding: 16px;margin-top: 25px;border: dotted;border-color: darkgoldenrod;color: #333;\"><img src=\"https://keyword.com/serp/images/nearpin.svg\" height=\"20\">Searching from: ' + nearvalue + '</span>';
 }
 
