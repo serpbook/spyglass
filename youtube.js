@@ -13,7 +13,8 @@ $(document).ready(function() {
 
 
     setInterval(function() {
-        var cnt = 1;
+  	    //starting page
+        var cnt = ((page_ranking-1)*20)+1;
         var $num = '';
         $('span.num').remove();
         $("ytd-video-renderer.ytd-item-section-renderer").each(function() {
