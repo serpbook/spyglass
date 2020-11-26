@@ -79,5 +79,13 @@ $(document).ready(function(){
           cnt++;
       }
     });
+	  
+	//styling CSS through JS
+	$("span.num").css("left", "-50px");
+	$("span.num").css("position", "absolute");
+	$("span.num").css("margin-top", "26px");
+	$("span.num").css("font-size", "20px");
+	$("span.ignored").css("left", "-100px");
 
+	  
   });
