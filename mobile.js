@@ -9,7 +9,7 @@ if(!window.location.href.includes('&client')){
 }
 
 var unranked = '';
-if(!window.location.href.includes('&unranked')){
+if(window.location.href.includes('&unranked')){
   unranked = '<br><br><font color=crimson>We did not find your site ranking for the keyword. This is the first page of the results.</font>';
 }
 
