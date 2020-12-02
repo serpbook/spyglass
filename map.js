@@ -13,3 +13,7 @@ $("#spyglass").append(unranked + '<br><br><a target="_blank" href="' + window.lo
   window.onbeforeunload = function () {
        return "Would you like to leave?";
   }
+
+
+//hides top menu bar
+$('#sfcnt').hide();
