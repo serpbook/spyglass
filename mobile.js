@@ -45,25 +45,25 @@ $(document).ready(function(){
 });
 
 
-//counting the results in SERPs
-$(document).ready(function () {
-  var cnt = 1;
-  $("div.O9g5cc").each(function () {
+// //counting the results in SERPs
+// $(document).ready(function () {
+//   var cnt = 1;
+//   $("div.O9g5cc").each(function () {
 
-    $(this).html(
-      "<span class='num'>#" +
-      cnt +
-      "</span>" +
-      $(this).html()
-    );
-    cnt++;
+//     $(this).html(
+//       "<span class='num'>#" +
+//       cnt +
+//       "</span>" +
+//       $(this).html()
+//     );
+//     cnt++;
 
-  });
-  //styling CSS through JS
-  $("span.num").css("margin-top", "3px");
-  $("span.num").css("position", "relative");
-  $("span.num").css("float", "left");
-  $("span.num").css("font-size", "20px");
-  $("span.num").css("padding", "10px 15px 0px");
+//   });
+//   //styling CSS through JS
+//   $("span.num").css("margin-top", "3px");
+//   $("span.num").css("position", "relative");
+//   $("span.num").css("float", "left");
+//   $("span.num").css("font-size", "20px");
+//   $("span.num").css("padding", "10px 15px 0px");
 
-});
+// });
