@@ -2,6 +2,10 @@
 $("html").css("overflow", "auto");
 $("#lb").hide();
 
+//hide cookies notice https://i.imgur.com/Q70yy1G.png
+$('.jw8mI').hide();
+$('.vUd4jb').hide();
+
 //replace footer text branding
 $("#swml-loc").html("Keyword.com");
 $("#Wprf1b").html("Keyword.com");
