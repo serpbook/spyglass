@@ -35,6 +35,7 @@ setTimeout(function () {
   $(".t7xA6").hide();
   $(".Sr5CLc").hide();
   $(".wwYr3").hide();
+  $('.HTjtHe').hide();
 }, 1000);
 
 //auto scroll
