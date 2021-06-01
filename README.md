@@ -16,16 +16,17 @@ This will show an HTML file we call the ***Spyglass***:
 
 We can enhance the experience of the **Spyglass** page, by injecting certain Javascript functions, after loading the HTML.
 
-### For example:
+### Features for each device:
 
-#### Finding and highlighting where their website is, auto-scrolling to their tracked website, .
+##### Finding and highlighting where their website is
+##### Auto-scrolling to their tracked website
 
 <img width="541" alt="Screen Shot 2021-06-01 at 2 21 29 PM" src="https://user-images.githubusercontent.com/45627908/120378906-a87c9100-c2e4-11eb-9197-f5ce2be6f3a9.png">
 
-#### Auto-numbering SERP results
+##### Auto-numbering SERP results
 <img width="103" alt="Screen Shot 2021-06-01 at 2 21 43 PM" src="https://user-images.githubusercontent.com/45627908/120378951-b16d6280-c2e4-11eb-9099-87490b384251.png">
 
-#### Auto hiding popups
+##### Auto hiding popups
 <img width="393" alt="Screen Shot 2021-06-01 at 2 22 07 PM" src="https://user-images.githubusercontent.com/45627908/120379002-c0541500-c2e4-11eb-8d33-02b134164057.png">
 
 # How this works
