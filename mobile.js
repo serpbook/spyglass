@@ -36,8 +36,8 @@ setTimeout(function () {
   $(".Sr5CLc").hide();
   $(".wwYr3").hide();
   
-  //this is causing user to not be able to scroll
-  //$('.HTjtHe').hide();
+  $('.HTjtHe').hide();
+  $('.EM1Mrb').css("overflow", "auto"); //allow scrolling
 }, 1000);
 
 //auto scroll
