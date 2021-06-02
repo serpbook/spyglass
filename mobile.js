@@ -61,7 +61,7 @@ $(document).ready(function () {
 //counting the results in SERPs
 $(document).ready(function () {
   var cnt = 1;
-  $("img[width=16][height=16]").each(function () {
+  $(".Zu0yb.UGIkD.qzEoUe").each(function () {
     if ($(this).parent("g-img").length == 0) {
       $(this)
         .parent()
