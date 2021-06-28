@@ -61,8 +61,13 @@ $(document).ready(function () {
 //counting the results in SERPs
 $(document).ready(function () {
   var cnt = 1;
+  if (ignore_local == 0) {
+    $(".Zu0yb.UGIkD.qzEoUe").each(function () {
+      
+    });  
+  }
   $(".Zu0yb.UGIkD.qzEoUe").each(function () {
-    if ($(this).parent("g-img").length == 0) {
+    if ($(this).parent("g-img").length == 0 && typeof $(this).closest('a').attr('data-click') == 'undefined' && $(this).parent().find('span.jpu5Q.VqFMTc.p8AiDd').length == 0) {
       $(this)
         .parent()
         .html(
