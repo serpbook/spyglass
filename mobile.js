@@ -66,7 +66,8 @@ $(document).ready(function () {
       
     });  
   }
-  $(".Zu0yb.UGIkD.qzEoUe").each(function () {
+  // added .ifM9O .V1nn0e.R5lVqb .uo4vr img to include featured snippet
+  $(".Zu0yb.UGIkD.qzEoUe,.ifM9O .V1nn0e.R5lVqb .uo4vr img").each(function () {
     if ($(this).parent("g-img").length == 0 && typeof $(this).closest('a').attr('data-click') == 'undefined' && $(this).parent().find('span.jpu5Q.VqFMTc.p8AiDd').length == 0) {
       $(this)
         .parent()
