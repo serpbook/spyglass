@@ -50,27 +50,6 @@ $("#tvcap").prepend(
 );
 $("#gb").hide();
 
-//scroll to function, to scroll to the ranking url
-$(document).ready(function () {
-  var scrollTo = [];
-  if (scrollTo.length == 0 && ignore_local == 0) {
-    scrollTo = $("a[href='" + rankingurl + "']").closest("div.uMdZh");
-  } else {
-    scrollTo = $("a[href='" + rankingurl + "']").closest("div.g");
-  }
-
-  console.log(scrollTo);
-  scrollTo.css("background", "#bfff25");
-
-  $("html, body").animate(
-    {
-      scrollTop: scrollTo.offset().top - 100,
-    },
-    1000,
-    function () {}
-  );
-});
-
 //counter
 $(document).ready(function () {
   var cnt = 1;
@@ -106,7 +85,7 @@ $(document).ready(function () {
       }
     }
   });
-  $("#rso div.rc").each(function () {
+  $("#rso div.rc,.yuRUbf").each(function () {
     if (
       $(this).closest("div.ifM9O").length == 0 &&
       $(this).parent("div.gy6Qzb").length == 0 &&
@@ -123,4 +102,19 @@ $(document).ready(function () {
   $("span.num").css("margin-top", "26px");
   $("span.num").css("font-size", "20px");
   $("span.ignored").css("left", "-100px");
+
+  //scroll to function, to scroll to the ranking url
+  var scrollTo = [];
+  if (scrollTo.length == 0 && ignore_local == 0) {
+    scrollTo = $("a[href='" + rankingurl + "']").closest("div.uMdZh");
+  } else {
+    scrollTo = $("a[href='" + rankingurl + "']").closest("div.g");
+  }
+
+  scrollTo.css("background", "#bfff25");
+  
+  setTimeout(function(){ 
+    window.scrollTo(scrollTo.offset().top,scrollTo.offset().top-100);
+    scrollTo.focus();
+  }, 1000);
 });
