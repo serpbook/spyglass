@@ -40,24 +40,6 @@ setTimeout(function () {
   $('.EM1Mrb').css("overflow", "auto"); //allow scrolling
 }, 1000);
 
-//auto scroll
-$(document).ready(function () {
-  var scrollTo = $("a[href='" + rankingurl + "']").closest("div.uUPGi");
-  if (scrollTo.length == 0) {
-    scrollTo = $("a[href='" + rankingurl + "']").closest("div.aJOXUd");
-  }
-  console.log(scrollTo);
-  scrollTo.css("background", "#bfff25");
-
-  $("html, body").animate(
-    {
-      scrollTop: scrollTo.offset().top - 100,
-    },
-    1000,
-    function () {}
-  );
-});
-
 //counting the results in SERPs
 $(document).ready(function () {
   var cnt = 1;
@@ -82,4 +64,17 @@ $(document).ready(function () {
   $("span.num").css("position", "relative");
   $("span.num").css("font-size", "20px");
   $("span.num").css("padding", "10px 15px 0px");
+
+  //scroll to function, to scroll to the ranking url
+  var scrollTo = $("a[href='" + rankingurl + "']").closest("div.uUPGi");
+  if (scrollTo.length == 0) {
+    scrollTo = $("a[href='" + rankingurl + "']").closest("div.aJOXUd");
+  }
+  scrollTo.css("background", "#bfff25");
+
+  setTimeout(function(){ 
+    window.scrollTo(scrollTo.offset().top,scrollTo.offset().top-100);
+    scrollTo.focus();
+  }, 1000);
+  
 });
