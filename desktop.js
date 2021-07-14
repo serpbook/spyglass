@@ -65,21 +65,21 @@ $(document).ready(function () {
       $(this).html("<span class='num ignored'>Ignored</span>" + $(this).html());
     });
   }
-  $("#rso div.rc").each(function () {
+  $("#rso div.rc, .kp-blk .g .yuRUbf").each(function () {
     if (
       $(this).parent("div.gy6Qzb").length == 0 &&
       $(this).closest("div.pocFOe").length == 0
     ) {
       if ($(this).closest("div.kp-blk").length > 0) {
         $(this)
-          .closest("div.kp-blk")
+          .closest("div.kp-blk .yuRUbf")
           .parent()
           .parent()
           .html(
             "<span class='num'>#" +
               cnt +
               "</span>" +
-              $(this).closest("div.kp-blk").parent().parent().html()
+              $(this).closest("div.kp-blk .yuRUbf").parent().parent().html()
           );
         cnt++;
       }
