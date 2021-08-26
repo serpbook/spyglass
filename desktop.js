@@ -85,7 +85,7 @@ $(document).ready(function () {
       }
     }
   });
-  $("#rso div.rc,.yuRUbf").each(function () {
+  $("#rso div.rc,.yuRUbf,div.DOqJne").each(function () {
     if (
       $(this).closest("div.ifM9O").length == 0 &&
       $(this).parent("div.gy6Qzb").length == 0 &&
