@@ -49,7 +49,7 @@ $(document).ready(function () {
     });  
   }
   // added .ifM9O .V1nn0e.R5lVqb .uo4vr img to include featured snippet
-  $(".Zu0yb.UGIkD.qzEoUe,.ifM9O .V1nn0e.R5lVqb .uo4vr img").each(function () {
+  $(".Zu0yb.UGIkD.qzEoUe,.ifM9O .V1nn0e.R5lVqb .uo4vr img,div.Dwsemf").each(function () {
     if ($(this).parent("g-img").length == 0 && typeof $(this).closest('a').attr('data-click') == 'undefined' && $(this).parent().find('span.jpu5Q.VqFMTc.p8AiDd').length == 0) {
       $(this)
         .parent()
@@ -64,6 +64,7 @@ $(document).ready(function () {
   $("span.num").css("position", "relative");
   $("span.num").css("font-size", "20px");
   $("span.num").css("padding", "10px 15px 0px");
+  $("span.num").css("color", "black");
 
   //scroll to function, to scroll to the ranking url
   var scrollTo = $("a[href='" + rankingurl + "']").closest("div.uUPGi");
