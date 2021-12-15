@@ -56,7 +56,8 @@ $(document).ready(function () {
   if (ignore_local == 0) {
     if (in_local_pack) {
       $("div.dbg0pd").each(function () {
-        $(this).html("<span class='num'>#" + cnt + "</span>" + $(this).html());
+        //buggy and not working perfectly for now
+        //$(this).html("<span class='num'>#" + cnt + "</span>" + $(this).html());
         cnt++;
       });
     }
