@@ -92,7 +92,7 @@ $(document).ready(function () {
       $(this).parent("div.gy6Qzb").length == 0 &&
       $(this).closest("div.pocFOe").length == 0
     ) {
-      $(this).html("<span class='num'>#" + cnt + "</span>" + $(this).html());
+      //$(this).html("<span class='num'>#" + cnt + "</span>" + $(this).html());
       cnt++;
     }
   });
