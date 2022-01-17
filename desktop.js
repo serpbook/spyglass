@@ -50,59 +50,43 @@ $("#tvcap").prepend(
 );
 $("#gb").hide();
 
-//counter
-$(document).ready(function () {
-  var cnt = 1;
-  if (ignore_local == 0) {
-    if (in_local_pack) {
-      $("div.dbg0pd").each(function () {
-        //buggy and not working perfectly for now
-        //$(this).html("<span class='num'>#" + cnt + "</span>" + $(this).html());
-        cnt++;
-      });
-    }
-  } else {
-    $("div.dbg0pd").each(function () {
-      $(this).html("<span class='num ignored'>Ignored</span>" + $(this).html());
-    });
-  }
-  $("#rso div.rc, .kp-blk .g .yuRUbf").each(function () {
-    if (
-      $(this).parent("div.gy6Qzb").length == 0 &&
-      $(this).closest("div.pocFOe").length == 0
-    ) {
-      if ($(this).closest("div.kp-blk").length > 0) {
-        $(this)
-          .closest("div.kp-blk .yuRUbf")
-          .parent()
-          .parent()
-          .html(
-            "<span class='num'>#" +
-              cnt +
-              "</span>" +
-              $(this).closest("div.kp-blk .yuRUbf").parent().parent().html()
-          );
-        cnt++;
-      }
-    }
-  });
-  $("#rso div.rc,.yuRUbf,div.DOqJne").each(function () {
-    if (
-      $(this).closest("div.ifM9O").length == 0 &&
-      $(this).parent("div.gy6Qzb").length == 0 &&
-      $(this).closest("div.pocFOe").length == 0
-    ) {
-      //$(this).html("<span class='num'>#" + cnt + "</span>" + $(this).html());
-      cnt++;
-    }
-  });
+$( document ).ready( function() {
+    //-- begin clean up unwanted elements
+    // what we want to avoid here are items like Ad, etc. so that later they will not be selected / numbered
+    // does not always need to be removed, we can also replace it with other elements to maintain aesthetics
 
-  //styling CSS through JS
-  $("span.num").css("left", "-50px");
-  $("span.num").css("position", "absolute");
-  $("span.num").css("margin-top", "26px");
-  $("span.num").css("font-size", "20px");
-  $("span.ignored").css("left", "-100px");
+    $( "div.action-menu" ).each( function() {
+        $( this ).remove();
+    } );
+
+    // People also ask
+    $( "div.related-question-pair" ).each( function() {
+        $( this ).html( "<div style='margin-top: 12px; margin-bottom: 12px'><span>" + $( this ).text() + "</span></div>" );
+    } );
+
+    // Ad
+    $( ":has(> a[href*='/aclk?'][href*='sa='][href*='adurl='], > a[data-rw*='/aclk?'][href*='sa='][href*='adurl='])" ).each( function() {
+        $( this ).html( "<span>" + $( this ).text() + "</span>" );
+    } );
+
+    //-- end clean up unwanted elements
+
+    var rank         = 1;
+    var queries      = "div.g :not(.r) > a:has(> h3)";
+    var ignore_local = ignore_local !== undefined ? ignore_local : 1;
+
+    if ( ignore_local != 1 ) {
+        // append query for local
+        queries += ", div[data-hveid] a.rllt__link";
+    }
+
+    // numbering
+    $( queries ).each( function() {
+        $( this )
+            .parent()
+            .prepend( "<div style='border: 1px solid blue; color: #ff6666; float: left; font-size: 18px; margin-right: 12px; margin-top: 24px'>#" + rank + "</div>" );
+        rank++;
+    } );
 
   //scroll to function, to scroll to the ranking url
   var scrollTo = [];
@@ -118,4 +102,5 @@ $(document).ready(function () {
     window.scrollTo(scrollTo.offset().top,scrollTo.offset().top-100);
     scrollTo.focus();
   }, 1000);
-});
+
+} );
