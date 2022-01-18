@@ -73,7 +73,6 @@ $( document ).ready( function() {
 
     var rank         = 1;
     var queries      = "div.g :not(.r) > a:has(> h3)";
-    var ignore_local = ignore_local !== undefined ? ignore_local : 1;
 
     if ( ignore_local != 1 ) {
         // append query for local
