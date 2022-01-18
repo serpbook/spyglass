@@ -84,7 +84,7 @@ $( document ).ready( function() {
     $( queries ).each( function() {
         $( this )
             .parent()
-            .prepend( "<div style='border: 1px solid blue; color: #ff6666; float: left; font-size: 18px; margin-right: 12px; margin-top: 24px'>#" + rank + "</div>" );
+            .prepend( "<div style='border: 1px solid #c4c4c4;color: #ea4335;float: left;font-size: 18px;margin-right: 12px;margin-top: 24px;padding-left: 5px;padding-right: 5px;'>#" + rank + "</div>" );
         rank++;
     } );
 
