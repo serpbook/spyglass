@@ -71,13 +71,26 @@ $( document ).ready( function() {
 
     //-- end clean up unwanted elements
 
-    var rank         = 1;
-    var queries      = "div.g :not(.r) > a:has(> h3)";
+    var query_organic = "div.g :not(.r) > a:has(> h3)";
+    var query_local   = "div[data-hveid] a.rllt__link";
+    var gmb_found     = false;
 
-    if ( ignore_local != 1 ) {
+    // check if gmb is in local
+    $( query_local + " div[role='heading']" ).each( function() {
+        if ( $( this ).text().indexOf( gmb ) > -1 ) {
+            gmb_found = true;
+            return false; // break
+        }
+    } );
+
+    var queries = query_organic;
+
+    if ( ignore_local != 1 && gmb_found ) {
         // append query for local
-        queries += ", div[data-hveid] a.rllt__link";
+        queries += ", " + query_local;
     }
+
+    var rank = 1;
 
     // numbering
     $( queries ).each( function() {
