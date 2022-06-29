@@ -72,12 +72,12 @@ $(document).ready(function () {
     scrollTo = $("a[href='" + rankingurl + "']").closest("div.aJOXUd");
   }
   
-  if (scrollTo.length == 0) {
-    scrollTo = $("a[href='" + rankingurl + "']").closest("div.mnr-c");
+ if (scrollTo.length == 0) {
+    scrollTo = $("a[href='" + rankingurl + "']").closest("div.Ww4FFb");
   }
   
   if (scrollTo.length == 0) {
-    scrollTo = $("a[href='" + rankingurl + "']").closest("div.Ww4FFb");
+    scrollTo = $("a[href='" + rankingurl + "']").closest("div.mnr-c");
   }
   
   scrollTo.css("background", "#bfff25");
