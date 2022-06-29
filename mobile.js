@@ -71,6 +71,15 @@ $(document).ready(function () {
   if (scrollTo.length == 0) {
     scrollTo = $("a[href='" + rankingurl + "']").closest("div.aJOXUd");
   }
+  
+  if (scrollTo.length == 0) {
+    scrollTo = $("a[href='" + rankingurl + "']").closest("div.mnr-c");
+  }
+  
+  if (scrollTo.length == 0) {
+    scrollTo = $("a[href='" + rankingurl + "']").closest("div.Ww4FFb");
+  }
+  
   scrollTo.css("background", "#bfff25");
 
   setTimeout(function(){ 
