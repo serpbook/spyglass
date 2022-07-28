@@ -76,7 +76,7 @@ $( document ).ready( function() {
 
     if ( ignore_local != 1 ) {
         // append query for local
-        queries += ", div[data-hveid] a.rllt__link";
+        queries += ", div[data-hveid] a.rllt__link:not(.b9tNq)";
     }
 
     // numbering
