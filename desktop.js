@@ -90,7 +90,7 @@ $( document ).ready( function() {
   //scroll to function, to scroll to the ranking url
   var scrollTo = [];
   if (scrollTo.length == 0 && ignore_local == 0) {
-    scrollTo = $("a[href='" + rankingurl + "']").closest("div.uMdZh, div.g")[0];
+    scrollTo = $($("a[href='" + rankingurl + "']").closest("div.uMdZh, div.g")[0]);
   } else {
     scrollTo = $("a[href='" + rankingurl + "']").closest("div.g");
   }
