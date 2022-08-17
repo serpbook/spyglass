@@ -97,9 +97,9 @@ $( document ).ready( function() {
 
   scrollTo.css("background", "#bfff25");
   
-//   setTimeout(function(){ 
-//     window.scrollTo(scrollTo.offset().top,scrollTo.offset().top-100);
-//     scrollTo.focus();
-//   }, 1000);
+  setTimeout(function(){ 
+    window.scrollTo(scrollTo.offset().top,scrollTo.offset().top-100);
+    scrollTo.focus();
+  }, 1000);
 
 } );
