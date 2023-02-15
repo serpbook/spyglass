@@ -42,10 +42,10 @@ $("#tvcap").prepend(
     "This is the page we found on the day of the ranking update. Please note that the current live page may differ, depending on which datacenter you are connected to." +
     near +
     unranked +
-    '<br><br><a target="_blank" href="https://keyword.com/serp/spyglass?kwid=' + keyword_id + '%7C' + keyword_auth + '&date=' + date +
-    '&debug"><small><u>View Keyword Settings</u></small></a><br><br><svg height="22px" version="1.1" viewBox="0 0 22 22" width="22px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="action" stroke="none" stroke-width="1"><g id="alert-notification-info-attention"><path d="M11,22 C17.0751322,22 22,17.0751322 22,11 C22,4.92486775 17.0751322,0 11,0 C4.92486775,0 0,4.92486775 0,11 C0,17.0751322 4.92486775,22 11,22 Z M11,20 C15.9705627,20 20,15.9705627 20,11 C20,6.02943725 15.9705627,2 11,2 C6.02943725,2 2,6.02943725 2,11 C2,15.9705627 6.02943725,20 11,20 Z" fill="#F2C500"/><path d="M10,6 L12,6 L12,13 L10,13 L10,6 Z M10,14 L12,14 L12,16 L10,16 L10,14 Z" fill="#F59D00"/></g></g></svg> ' + 
-  ' <a target="_blank" href="https://keyword.com/serp/self-debug?kwid=' +
-    keyword_id + '%7C' + keyword_auth + '&date=' + date+
+    '<br><br><a target="_blank" href="' +
+    window.location.href +
+    '&debug"><small><u>View Keyword Settings</u></small></a><br><br><svg height="22px" version="1.1" viewBox="0 0 22 22" width="22px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="action" stroke="none" stroke-width="1"><g id="alert-notification-info-attention"><path d="M11,22 C17.0751322,22 22,17.0751322 22,11 C22,4.92486775 17.0751322,0 11,0 C4.92486775,0 0,4.92486775 0,11 C0,17.0751322 4.92486775,22 11,22 Z M11,20 C15.9705627,20 20,15.9705627 20,11 C20,6.02943725 15.9705627,2 11,2 C6.02943725,2 2,6.02943725 2,11 C2,15.9705627 6.02943725,20 11,20 Z" fill="#F2C500"/><path d="M10,6 L12,6 L12,13 L10,13 L10,6 Z M10,14 L12,14 L12,16 L10,16 L10,14 Z" fill="#F59D00"/></g></g></svg>  <a target="_blank" href="' +
+    window.location.href.replace("spyglass", "self-debug") +
     '">Having issues with this keyword?</a></p>'
 );
 $("#gb").hide();
